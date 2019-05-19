@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button color="danger"
+                  (click)="onClose()">
+        <ion-icon name="close-circle-outline"
+                  slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Results</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let show of shows">
+      <ion-avatar slot="start">
+        <img src="{{show.image}}" alt="N/A">
+      </ion-avatar>
+      <ion-label>
+        <ion-text color="primary">
+          <h2>{{show.name}}</h2>
+        </ion-text>
+        <ion-text color="secondary">
+          <p>
+            <span *ngIf="show.status">Status: <strong>{{show.status}}</strong></span>
+            <span *ngIf="show.status && show.premiered">   |   </span>
+            <span *ngIf="show.premiered"> Aired: <strong>{{show.premiered | date}}</strong></span>
+          </p>
+        </ion-text>
+        <p [innerHTML]="show.summary" ></p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
