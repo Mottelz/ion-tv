@@ -11,6 +11,7 @@ import {ModalController} from '@ionic/angular';
 export class ResultsComponent implements OnInit {
   @Input() term: string;
   shows: Show[];
+
   constructor(public tvmaze: TvmazeService,
               public modalCtr: ModalController) {}
 
@@ -18,7 +19,6 @@ export class ResultsComponent implements OnInit {
     this.tvmaze.fetchShows(this.term)
         .subscribe(results => {
           this.shows = results;
-          console.log(this.shows);
         });
   }
 
