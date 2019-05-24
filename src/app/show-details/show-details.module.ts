@@ -4,7 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 import { ShowDetailsPage } from './show-details.page';
-import {EpisodeNumberPrettierPipe} from '../pipes/episode-number-prettier.pipe';
+import { EpisodeNumberPrettierPipe } from '../pipes/episode-number-prettier.pipe';
+import { SeasonDetailsComponent } from './season-details/season-details.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,7 @@ const routes: Routes = [
         IonicModule,
         RouterModule.forChild(routes)
     ],
-  declarations: [ShowDetailsPage, EpisodeNumberPrettierPipe]
+    declarations: [ShowDetailsPage, EpisodeNumberPrettierPipe, SeasonDetailsComponent],
+    entryComponents: [SeasonDetailsComponent]
 })
 export class ShowDetailsPageModule {}

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import {ResultsComponent} from './results/results.component';
+import { ResultsComponent } from './results/results.component';
 
 @Component({
   selector: 'app-search',

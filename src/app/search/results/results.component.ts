@@ -12,8 +12,7 @@ export class ResultsComponent implements OnInit {
   @Input() term: string;
   shows: Show[];
 
-  constructor(public tvmaze: TvmazeService,
-              public modalCtr: ModalController) {}
+  constructor(public tvmaze: TvmazeService, public modalCtr: ModalController) {}
 
   ngOnInit() {
     this.tvmaze.fetchShows(this.term)
