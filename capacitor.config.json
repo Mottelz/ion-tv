@@ -1,0 +1,7 @@
+{
+  "appId": "com.mottelz.iontv",
+  "appName": "ion-tv",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www"
+}
